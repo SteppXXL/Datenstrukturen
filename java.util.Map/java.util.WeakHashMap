@@ -12,3 +12,13 @@
 TODO
 JavaDoc: This class is intended primarily for use with key objects whose equals methods test for object identity using the == operator. Once such a key is discarded it can never be recreated, so it is impossible to do a lookup of that key in a WeakHashMap at some later time and be surprised that its entry has been removed. This class will work perfectly well with key objects whose equals methods are not based upon object identity, such as String instances. With such recreatable key objects, however, the automatic removal of WeakHashMap entries whose keys have been discarded may prove to be confusing.
 Ist das  nun für keys mit == oder für equals -Gleichheit gedacht??
+
+Gemeint ist hier imho:
+
+Keys, deren equals auf Identität prüft (==) funktionieren prima, weil sobald der GC einen Key rausgekickt hat, 
+ists nicht mehr möglich einen hit auf die map zu bekommen.
+
+Wenn man allerdings NICHT auf Identität in der equals prüft, könnte man überrascht sein, dass obwohl ein key 
+rausgepfeffert wurde, es immer noch nen treffer gibt.
+
+Im Grunde alles nicht funky.
