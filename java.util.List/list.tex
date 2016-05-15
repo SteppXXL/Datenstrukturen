@@ -17,7 +17,7 @@
     \item null Element erlaubt
     \item remove Operationen verkleinern das Array nicht (trimToSize() verkleinert bis auf die aktuelle Größe)
     \item Re-size Operationen mittels System.arrycopy (nativ, schnell)
-    \item TODO 0 bzw. Startgröße, dann jeweils mal 2
+    \item **TODO** 0 bzw. Startgröße, dann jeweils mal 2
     \item remove und add sollten nur am Ende der Liste geschehen
 %     \item CPU-cache friendly collection due to being backed by an array 
 %     (unfortunately, not too friendly, because contains Objects, which are just 
@@ -34,7 +34,7 @@
   Operation        & Laufzeit \\\hline
   add              & \O{1} / \O{n} mit re-size \\
   add(int, Object) & je kleiner die Posistion, desto länger \\
-  remove(Object)   & \O{n} TODO so viel wegen shifting? was ist shifting? \\
+  remove(Object)   & \O{n} **TODO** so viel wegen shifting? was ist shifting? \\
   remove(int)      & \O{n} wegen shifting \\
   get              & \O{1}
   \end{tabular}
