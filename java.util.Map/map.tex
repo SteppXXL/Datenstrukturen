@@ -36,6 +36,7 @@
   \item wenn $number\ entries \geq loadFactor * capacity$ dann rehash
   \item wenn viele puts, dann sollte initialCapacity groß genug sein, um Anzahl an rehashes klein zu halten
   \item aber initialCapacity nicht zu hoch und loadFactor nicht zu niedrig setzen, sonst zu viele rehashes
+  % Warum rehashing bei zu hoher Kapazität? Unlogisch? Bei zu gerigem LF ists klar.
 \end{itemize}
 \end{frame}
 
